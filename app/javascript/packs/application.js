@@ -7,6 +7,7 @@ require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
+require("semantic-ui-sass")
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference
@@ -16,5 +17,6 @@ require("channels")
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
 // Loads all Semantic javascripts
-//= require semantic-ui
 //= require jquery
+
+$(document).on("turbolinks:load", () => $(".ui.dropdown").dropdown());
